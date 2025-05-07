@@ -1,0 +1,11 @@
+*.sym
+*.ptau
+*.png
+*.jpg
+Database/
+node_modules
+src/*.r1cs
+src/*.zkey
+src/*.json
+src/main_js/
+src/phash_js/

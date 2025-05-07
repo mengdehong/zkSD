@@ -1,0 +1,80 @@
+{
+	"compiler": {
+		"version": "0.8.29+commit.ab55807c"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[2]",
+						"name": "_pA",
+						"type": "uint256[2]"
+					},
+					{
+						"internalType": "uint256[2][2]",
+						"name": "_pB",
+						"type": "uint256[2][2]"
+					},
+					{
+						"internalType": "uint256[2]",
+						"name": "_pC",
+						"type": "uint256[2]"
+					},
+					{
+						"internalType": "uint256[4]",
+						"name": "_pubSignals",
+						"type": "uint256[4]"
+					}
+				],
+				"name": "verifyProof",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"SmartContract/128verifier.sol": "Groth16Verifier"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"SmartContract/128verifier.sol": {
+			"keccak256": "0x6f036b8454c0dbc5f529726780f4ce32af106dc27f6406c9a369306f786a062c",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://3b74fab83dc03f0ef995a516543debd2e4932e05dc4291b2033bba59eef23cf8",
+				"dweb:/ipfs/QmYi8DATVvQo56iCUcvWWUU6iG8Jo4YkCtakjNwyLUCVEi"
+			]
+		}
+	},
+	"version": 1
+}
