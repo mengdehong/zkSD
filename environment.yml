@@ -1,11 +1,8 @@
-name: zkp
+name: zksd
 channels:
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
-  - pytorch
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch3d/
   - defaults
   - https://repo.anaconda.com/pkgs/main
   - https://repo.anaconda.com/pkgs/r

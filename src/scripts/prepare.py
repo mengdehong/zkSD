@@ -1,15 +1,11 @@
 # NFT发布者运行,根据他的图片生成电路所需要的输入数据,用json存储
 # 然后NFT发布者使用snarkjs将图片对于的json文件输入到phash电路,计算图片的phash值
-
 from PIL import Image
+from phash import generate_dct_coefficients
 import numpy as np
 import json
 import sys
 import os
-
-# 导入phash.py中的generate_dct_coefficients函数
-sys.path.append(os.path.join(os.path.dirname(__file__), 'old'))
-from scripts.phash import generate_dct_coefficients
 
 def process_image(image_path):
     # 打开并转换为灰度图
@@ -61,8 +57,14 @@ def main():
             "dct_coefficients": dct_coefficients_str
         }
         
-        # 保存到JSON文件
-        output_filename = os.path.splitext(os.path.basename(image_path))[0] + "_data.json"
+        # 定义输出目录和文件名
+        output_dir = os.path.join(os.path.dirname(__file__), "..", "..", "workdir")
+        # 创建输出目录（如果不存在）
+        os.makedirs(output_dir, exist_ok=True)
+        
+        base_name = os.path.splitext(os.path.basename(image_path))[0]
+        output_filename = os.path.join(output_dir, f"{base_name}.json")
+        
         with open(output_filename, "w") as f:
             json.dump(output_data, f, indent=2)
         

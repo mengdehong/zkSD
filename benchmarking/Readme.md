@@ -14,8 +14,4 @@ chmod 777 ./script.sh
 7. good_input.json
 8. verification_key.json
 
-此外，main.r1cs留以备份。由以下命令产生
 
-```
-circom main.circom --r1cs --O2
-```
