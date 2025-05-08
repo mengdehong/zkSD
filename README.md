@@ -1,15 +1,25 @@
-## 文档
-
-circom: https://docs.circom.io/getting-started/installation/
-
-snarkjs: https://github.com/iden3/snarkjs
-
 ### 环境配置
 
+推荐使用docker运行本项目,请参考docker官网安装docker,运行以下命令
+
+```
+docker pull mengdh/zksd
+docker run -it mengdh/zksd /bin/bash
+
+cd benchmarking
+# ./script.sh [run_times]   [dirname]
+./script.sh 1 128
+
+```
+
+* 由于docker环境问题,运行时间会比论文中久,请自行修改docker配置
+
+也可自行构建项目环境:
+
 ```shell
-# ubuntu20
+# 操作系统:ubuntu20
 # circom 配置:
-# circom 底层为Rust,需要下载rust编译器
+# 下载rust编译器
 # 镜像配置,可选
 export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
 export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
@@ -33,31 +43,8 @@ npm install
 conda env create -f environment.yml
 ```
 
-```shell
-# rust下载配置
-sudo vim ~/.cargo/configsd .
-# 添加以下内容
-# 放到 `$HOME/.cargo/config` 文件中
-[source.crates-io]
-#registry = "https://github.com/rust-lang/crates.io-index"
+## 文档
 
-# 替换成你偏好的镜像源
-replace-with = 'ustc'
-#replace-with = 'sjtu'
+circom: https://docs.circom.io/getting-started/installation/
 
-# 清华大学
-[source.tuna]
-registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
-
-# 中国科学技术大学
-[source.ustc]
-registry = "git://mirrors.ustc.edu.cn/crates.io-index"
-
-# 上海交通大学
-[source.sjtu]
-registry = "https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index"
-
-# rustcc社区
-[source.rustcc]
-registry = "git://crates.rustcc.cn/crates.io-index"
-```
+snarkjs: https://github.com/iden3/snarkjs

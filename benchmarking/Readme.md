@@ -1,7 +1,3 @@
-```
-chmod 777 ./script.sh
-./script.sh [run_times]   [dirname]
-```
 
 每个dir应该包括以下8个文件
 

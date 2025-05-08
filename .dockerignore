@@ -1,5 +1,35 @@
 .git
-.gitignore
+.gitignore      
 node_modules
-npm-debug.log
+npm - debug.log
 Dockerfile
+
+.vscode /
+.idea /
+
+# Python virtual environments and cache
+venv /
+.venv /
+env /
+__pycache__ /
+*.pyc
+*.pyo
+*.egg - info /
+
+# Rust build artifacts
+target /
+
+# Test reports
+.pytest_cache /
+.coverage
+htmlcov /
+
+# OS - specific files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Local environment files
+.env
